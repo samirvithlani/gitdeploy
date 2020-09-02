@@ -11,6 +11,7 @@ import { App1Component } from './aboutus/app1/app1.component';
 import { ExdemoComponent } from './exdemo/exdemo.component';
 import { ErrorComponent } from './error/error.component';
 import { SearchComponent } from './search/search.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'exdemo', component: ExdemoComponent },
   { path: 'error', component: ErrorComponent },
   { path: 'search', component: SearchComponent },
+  { path: 'pipes', component: PipesComponent },
   { path: 'detail', component: DetailComponent, canActivate: [AuthGuard] },
   {
     path: 'parent', component: ParentComponent,

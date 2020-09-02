@@ -20,7 +20,8 @@ export class MenuComponent implements OnInit {
       { title: 'parent1', link: 'parent' },
       { title: 'aboutus', link: 'aboutus' },
       { title: 'exdemo', link: 'exdemo' },
-      { title: 'search', link: 'search' }
+      { title: 'search', link: 'search' },
+      { title: 'pipes', link: 'pipes'}
 
     ]
   }

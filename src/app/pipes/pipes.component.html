@@ -1,0 +1,22 @@
+<p>pipes works!</p>
+name = {{name | uppercase}}
+<br>
+surname = {{surname | lowercase}}
+<br>
+Date ->{{todaydate | date:'dd/MMMM/yyyy HH:mm:ss'}}
+<br>
+Date ->{{todaydate | date:'mediumTime'}}
+<br>
+<br>
+cr = >{{rs | currency:"INR":true}}
+
+<br>
+<br>
+{{rs|number:'3.2'}}
+
+<br>
+
+{{jsonvalue | json}}
+
+<br>
+{{months | slice:2:6}}
