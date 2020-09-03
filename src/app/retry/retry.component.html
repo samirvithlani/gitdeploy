@@ -1,0 +1,16 @@
+<div *ngFor="let emp of employee">
+
+    <table>
+        <td>Employee Name:-</td>
+        <td>{{emp.eName}}</td>
+    </table>
+
+</div>
+
+<button class="btn btn-primary" type="button" (click)="fetchData()">
+    <span *ngIf ="fetching" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    {{fetching ? 'Fetching' :'fetch Data'}}
+</button>
+<p>
+    status:<strong>{{status}}</strong>
+</p>

@@ -12,6 +12,7 @@ import { ExdemoComponent } from './exdemo/exdemo.component';
 import { ErrorComponent } from './error/error.component';
 import { SearchComponent } from './search/search.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { RetryComponent } from './retry/retry.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'error', component: ErrorComponent },
   { path: 'search', component: SearchComponent },
   { path: 'pipes', component: PipesComponent },
+  { path: 'retry', component: RetryComponent },
   { path: 'detail', component: DetailComponent, canActivate: [AuthGuard] },
   {
     path: 'parent', component: ParentComponent,

@@ -18,6 +18,7 @@ import { ErrorComponent } from './error/error.component';
 import { ErrorserviceService } from './errorservice.service';
 import { SearchComponent } from './search/search.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { RetryComponent } from './retry/retry.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PipesComponent } from './pipes/pipes.component';
     ExdemoComponent,
     ErrorComponent,
     SearchComponent,
-    PipesComponent
+    PipesComponent,
+    RetryComponent
   ],
   imports: [
     BrowserModule,
