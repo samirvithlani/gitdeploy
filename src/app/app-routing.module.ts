@@ -13,6 +13,8 @@ import { ErrorComponent } from './error/error.component';
 import { SearchComponent } from './search/search.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { RetryComponent } from './retry/retry.component';
+import { RapidComponent } from './rapid/rapid.component';
+import { CoronaComponent } from './corona/corona.component';
 
 
 const routes: Routes = [
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'error', component: ErrorComponent },
   { path: 'search', component: SearchComponent },
   { path: 'pipes', component: PipesComponent },
+  { path: 'corona', component: CoronaComponent },
+  { path: 'rapid', component: RapidComponent },
   { path: 'retry', component: RetryComponent },
   { path: 'detail', component: DetailComponent, canActivate: [AuthGuard] },
   {

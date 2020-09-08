@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { catchError, retry, retryWhen, delay, scan } from 'rxjs/operators';
 
 @Injectable({
@@ -8,7 +8,26 @@ import { catchError, retry, retryWhen, delay, scan } from 'rxjs/operators';
 })
 export class DataService {
 
+
+
   constructor(private http: HttpClient) { }
+
+
+  corona(name, date): Observable<any> {
+
+    let headers = new HttpHeaders();
+    headers = headers.set("x-rapidapi-host", "covid-19-data.p.rapidapi.com").set("x-rapidapi-key", "");
+    let params = new HttpParams();
+    console.log("inside corona", name)
+    console.log(date)
+    params = params.append("name", name).append("date", date);
+
+
+    return this.http.get("https://covid-19-data.p.rapidapi.com/report/country/name", {
+      params: params, headers: headers
+    });
+
+  }
 
   login(email, password) {
 
@@ -17,6 +36,19 @@ export class DataService {
     return this.http.get('http://localhost:8080/employee/adminlogin/' + email);
 
 
+  }
+
+  getCoronaData(name, date): Observable<any> {
+
+    let params = new HttpParams();
+    params.set("name", name).set("date", date)
+
+    let headers = new HttpHeaders();
+    headers.set("x-rapidapi-host", "covid-19-data.p.rapidapi.com").set("x-rapidapi-key", "")
+
+    return this.http.get("https://covid-19-data.p.rapidapi.com/report/country/name", {
+      params: params, headers: headers
+    });
   }
 
   getData(): Observable<any> {

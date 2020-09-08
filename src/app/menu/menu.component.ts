@@ -22,7 +22,9 @@ export class MenuComponent implements OnInit {
       { title: 'exdemo', link: 'exdemo' },
       { title: 'search', link: 'search' },
       { title: 'pipes', link: 'pipes' },
-      { title: 'retry', link: 'retry' }
+      { title: 'retry', link: 'retry' },
+      { title: 'rapid', link: 'rapid' },
+      { title: 'corona', link: 'corona' }
 
     ]
   }

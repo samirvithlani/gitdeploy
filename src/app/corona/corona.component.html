@@ -1,0 +1,32 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+    <div class="row">
+        <div class="card" style="width: 18rem;">
+
+            <div class="card-body">
+                <h5 class="card-title">INPUT</h5>
+                
+                COUNTRY NAME:-<input type="text" formControlName="name">
+                <br>
+                DATE:-<input type="date" formControlName="date">
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+                
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <h5 class="card-title">output</h5>
+            <div class="card-body" *ngFor ="let d of data">
+                
+                <div *ngFor ="let p of d.provinces">
+                    <h3>COUNTRY {{d.country}}</h3>
+                    <h3>confirmed cases {{p.confirmed}}</h3>
+                    <h3>deaths {{p.deaths}}</h3>
+                    <h3>Date:-{{d.date}}</h3>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</form>

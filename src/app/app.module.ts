@@ -19,6 +19,8 @@ import { ErrorserviceService } from './errorservice.service';
 import { SearchComponent } from './search/search.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { RetryComponent } from './retry/retry.component';
+import { RapidComponent } from './rapid/rapid.component';
+import { CoronaComponent } from './corona/corona.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { RetryComponent } from './retry/retry.component';
     ErrorComponent,
     SearchComponent,
     PipesComponent,
-    RetryComponent
+    RetryComponent,
+    RapidComponent,
+    CoronaComponent
   ],
   imports: [
     BrowserModule,
