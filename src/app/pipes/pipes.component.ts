@@ -8,6 +8,26 @@ import { Component, OnInit } from '@angular/core';
 export class PipesComponent implements OnInit {
 
   constructor() { }
+  dataArray =[
+
+    {
+      name:'gajni',
+      date:'02/15/2007'
+    },
+    {
+      name:'dil bechara',
+      date:'09/09/2020'
+    },
+    {
+      name:'spider man',
+      date:'02/15/2010'
+    },
+    {
+      name:'avangers',
+      date:'02/14/2018'
+    },
+  ]
+  salary:string ='500';
   name:string="sam";
   surname:string="VITHLANI";
   todaydate = new Date();
@@ -17,5 +37,9 @@ export class PipesComponent implements OnInit {
       months =['jan','feb','march','app','may','june']
   ngOnInit(): void {
   }
+
+
+
+
 
 }

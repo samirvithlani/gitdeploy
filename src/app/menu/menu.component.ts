@@ -24,7 +24,8 @@ export class MenuComponent implements OnInit {
       { title: 'pipes', link: 'pipes' },
       { title: 'retry', link: 'retry' },
       { title: 'rapid', link: 'rapid' },
-      { title: 'corona', link: 'corona' }
+      { title: 'corona', link: 'corona' },
+      { title: 'movie', link: 'movie' }
 
     ]
   }

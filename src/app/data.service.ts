@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { catchError, retry, retryWhen, delay, scan } from 'rxjs/operators';
+import { promise } from 'protractor';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,26 @@ export class DataService {
 
 
   constructor(private http: HttpClient) { }
+
+  movieName(id):Promise<any>{
+
+    let headers = new HttpHeaders();
+    headers = headers.set("x-rapidapi-host", "imdb-internet-movie-database-unofficial.p.rapidapi.com").set("x-rapidapi-key", "2cc1fb7fd1msh4c4e1eb5e0cf8e5p13cfd1jsn422b10471be6");
+    return this.http.get("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/"+id,{
+      headers:headers
+    }).toPromise();
+
+  }
+  movie(query):Observable<any>{
+
+    let headers = new HttpHeaders();
+    headers = headers.set("x-rapidapi-host", "imdb-internet-movie-database-unofficial.p.rapidapi.com").set("x-rapidapi-key", "2cc1fb7fd1msh4c4e1eb5e0cf8e5p13cfd1jsn422b10471be6");
+
+    return this.http.get("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/"+query,{
+      headers:headers
+    })
+
+  }
 
 
   corona(name, date): Observable<any> {

@@ -1,4 +1,15 @@
-<p>pipes works!</p>
+<h3>Days ago example</h3>
+<ul class="list-group">
+    <li *ngFor="let i of dataArray">
+        {{i.name}}
+        <span>
+                {{i.date | dayAgo}}
+        </span>
+    </li>
+</ul>
+
+
+<!-- <p>pipes works!</p>
 name = {{name | uppercase}}
 <br>
 surname = {{surname | lowercase}}
@@ -20,3 +31,10 @@ cr = >{{rs | currency:"INR":true}}
 
 <br>
 {{months | slice:2:6}}
+
+<br><br><br><br>
+My Sal :{{salary| salary:"." :"EUR"}}
+
+
+
+ -->

@@ -15,6 +15,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { RetryComponent } from './retry/retry.component';
 import { RapidComponent } from './rapid/rapid.component';
 import { CoronaComponent } from './corona/corona.component';
+import { MovieComponent } from './movie/movie.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: 'pipes', component: PipesComponent },
   { path: 'corona', component: CoronaComponent },
+  { path: 'movie', component: MovieComponent},
   { path: 'rapid', component: RapidComponent },
   { path: 'retry', component: RetryComponent },
   { path: 'detail', component: DetailComponent, canActivate: [AuthGuard] },

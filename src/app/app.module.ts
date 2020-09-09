@@ -21,6 +21,9 @@ import { PipesComponent } from './pipes/pipes.component';
 import { RetryComponent } from './retry/retry.component';
 import { RapidComponent } from './rapid/rapid.component';
 import { CoronaComponent } from './corona/corona.component';
+import { MovieComponent } from './movie/movie.component';
+import { SalaryPipe } from './salary.pipe';
+import { DayAgoPipe } from './day-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { CoronaComponent } from './corona/corona.component';
     PipesComponent,
     RetryComponent,
     RapidComponent,
-    CoronaComponent
+    CoronaComponent,
+    MovieComponent,
+    SalaryPipe,
+    DayAgoPipe
   ],
   imports: [
     BrowserModule,
