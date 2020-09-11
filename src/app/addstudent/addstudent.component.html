@@ -1,0 +1,83 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+    <table>
+        <tr>
+            <td>StudentName</td>
+            <td><input type="text" formControlName="sName">
+                <span *ngIf="myForm.get('sName').dirty">
+
+                    Name is required..
+
+                </span>
+
+
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>StudentEmail</td>
+            <td><input type="text" formControlName="sEmail">
+                <span *ngIf="myForm.get('sEmail').invalid">
+                    email is not valid
+                </span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>StudentPassword</td>
+            <td><input type="text" formControlName="sPassword"></td>
+        </tr>
+
+        <tr>
+            <td>ConfirmPassword</td>
+            <td><input type="text" formControlName="sCpassword">
+                <div *ngIf="myForm.get('sCpassword').invalid">
+                    <span *ngIf="myForm.get('sCpassword').dirty && myForm.get('sCpassword').hasError('notMatch')">
+
+                        password not matched..
+                    </span>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>StudentAge</td>
+            <td><input type="text" formControlName="sAge">
+                <div *ngIf="myForm.get('sAge').invalid">
+                    <span *ngIf="myForm.get('sAge').dirty && myForm.get('sAge').hasError('ageValid')">
+                        Age is not valid...
+                    </span>
+                </div>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>StudentIncome</td>
+            <td><input type="text" formControlName="sIncome">
+                <span *ngIf="myForm.get('sIncome').invalid">
+                    income is invalid...
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>ENTER PHONE</td>
+            <td><input type="text" formControlName="phone">
+                <span *ngIf="myForm.get('phone').invalid">
+                    mobile is not valid...
+                </span>
+            </td>
+
+        </tr>
+
+
+        <tr>
+            <td>
+                <button type="submit">SUBMIT</button>
+            </td>
+        </tr>
+
+    </table>
+
+
+</form>
