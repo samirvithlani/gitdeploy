@@ -17,9 +17,7 @@
         <tr>
             <td>StudentEmail</td>
             <td><input type="text" formControlName="sEmail">
-                <span *ngIf="myForm.get('sEmail').invalid">
-                    email is not valid
-                </span>
+                {{emailMsg}}
             </td>
         </tr>
 

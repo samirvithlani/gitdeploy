@@ -26,7 +26,8 @@ export class MenuComponent implements OnInit {
       { title: 'rapid', link: 'rapid' },
       { title: 'corona', link: 'corona' },
       { title: 'movie', link: 'movie' },
-      { title: 'addstudent', link: 'addstudent' }
+      { title: 'addstudent', link: 'addstudent' },
+      { title: 'inputdemo', link: 'inputdemo' }
 
 
     ]

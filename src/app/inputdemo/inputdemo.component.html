@@ -1,0 +1,6 @@
+<app-inputchild [item]="ci"></app-inputchild>
+<br>
+<input type="text" placeholder="input here" #name [(ngModel)]="value">
+
+<button type="button"(click)="uname(name)">submit</button>
+{{value}}

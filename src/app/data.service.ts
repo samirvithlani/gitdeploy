@@ -59,6 +59,13 @@ export class DataService {
 
   }
 
+
+  emailCheck(email):Observable<any>
+  {
+
+    return this.http.get('http://localhost:8080/employee/checkemail/' + email);
+  }
+
   getCoronaData(name, date): Observable<any> {
 
     let params = new HttpParams();

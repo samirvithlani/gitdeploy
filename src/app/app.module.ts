@@ -25,6 +25,8 @@ import { MovieComponent } from './movie/movie.component';
 import { SalaryPipe } from './salary.pipe';
 import { DayAgoPipe } from './day-ago.pipe';
 import { AddstudentComponent } from './addstudent/addstudent.component';
+import { InputdemoComponent } from './inputdemo/inputdemo.component';
+import { InputchildComponent } from './inputdemo/inputchild/inputchild.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { AddstudentComponent } from './addstudent/addstudent.component';
     MovieComponent,
     SalaryPipe,
     DayAgoPipe,
-    AddstudentComponent
+    AddstudentComponent,
+    InputdemoComponent,
+    InputchildComponent
   ],
   imports: [
     BrowserModule,
@@ -57,11 +61,11 @@ import { AddstudentComponent } from './addstudent/addstudent.component';
     ReactiveFormsModule
   ],
   providers: [
-    {
+/*     {
       provide: ErrorHandler,
       useClass: ErrorserviceService
     }
-  ],
+ */  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

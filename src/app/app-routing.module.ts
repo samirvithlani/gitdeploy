@@ -17,6 +17,8 @@ import { RapidComponent } from './rapid/rapid.component';
 import { CoronaComponent } from './corona/corona.component';
 import { MovieComponent } from './movie/movie.component';
 import { AddstudentComponent } from './addstudent/addstudent.component';
+import { InputdemoComponent } from './inputdemo/inputdemo.component';
+import { InputchildComponent } from './inputdemo/inputchild/inputchild.component';
 
 
 const routes: Routes = [
@@ -29,6 +31,13 @@ const routes: Routes = [
   { path: 'corona', component: CoronaComponent },
   { path: 'movie', component: MovieComponent },
   { path: 'rapid', component: RapidComponent },
+  {
+    path: 'inputdemo', component: InputdemoComponent, children: [
+      {
+        path: 'inputchild', component: InputchildComponent
+      }
+    ]
+  },
   { path: 'retry', component: RetryComponent },
   { path: 'addstudent', component: AddstudentComponent },
   { path: 'detail', component: DetailComponent, canActivate: [AuthGuard] },
