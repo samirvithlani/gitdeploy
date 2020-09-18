@@ -19,6 +19,7 @@ import { MovieComponent } from './movie/movie.component';
 import { AddstudentComponent } from './addstudent/addstudent.component';
 import { InputdemoComponent } from './inputdemo/inputdemo.component';
 import { InputchildComponent } from './inputdemo/inputchild/inputchild.component';
+import { DebounceComponent } from './debounce/debounce.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'exdemo', component: ExdemoComponent },
   { path: 'error', component: ErrorComponent },
+  { path: 'debounce', component: DebounceComponent },
   { path: 'search', component: SearchComponent },
   { path: 'pipes', component: PipesComponent },
   { path: 'corona', component: CoronaComponent },

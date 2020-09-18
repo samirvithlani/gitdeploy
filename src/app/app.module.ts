@@ -27,6 +27,9 @@ import { DayAgoPipe } from './day-ago.pipe';
 import { AddstudentComponent } from './addstudent/addstudent.component';
 import { InputdemoComponent } from './inputdemo/inputdemo.component';
 import { InputchildComponent } from './inputdemo/inputchild/inputchild.component';
+import { DebounceComponent } from './debounce/debounce.component';
+import { LoadingBarModule } from '@ngx-loading-bar/core';
+
 
 @NgModule({
   declarations: [
@@ -51,14 +54,16 @@ import { InputchildComponent } from './inputdemo/inputchild/inputchild.component
     DayAgoPipe,
     AddstudentComponent,
     InputdemoComponent,
-    InputchildComponent
+    InputchildComponent,
+    DebounceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoadingBarModule
   ],
   providers: [
 /*     {
