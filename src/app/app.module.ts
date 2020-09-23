@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { DetailComponent } from './detail/detail.component';
 import { ParentComponent } from './parent/parent.component';
@@ -29,6 +29,11 @@ import { InputdemoComponent } from './inputdemo/inputdemo.component';
 import { InputchildComponent } from './inputdemo/inputchild/inputchild.component';
 import { DebounceComponent } from './debounce/debounce.component';
 import { LoadingBarModule } from '@ngx-loading-bar/core';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { LoaderComponent } from './loader/loader.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { LoaderserviceService } from './loaderservice.service';
+import { LoaderInterceptor } from './loader.interceptor';
 
 
 @NgModule({
@@ -55,7 +60,9 @@ import { LoadingBarModule } from '@ngx-loading-bar/core';
     AddstudentComponent,
     InputdemoComponent,
     InputchildComponent,
-    DebounceComponent
+    DebounceComponent,
+    UserloginComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -63,9 +70,13 @@ import { LoadingBarModule } from '@ngx-loading-bar/core';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    LoadingBarModule
+    LoadingBarModule,
+    MatProgressSpinnerModule
   ],
   providers: [
+    LoaderserviceService, {
+      provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true
+    }
 /*     {
       provide: ErrorHandler,
       useClass: ErrorserviceService
