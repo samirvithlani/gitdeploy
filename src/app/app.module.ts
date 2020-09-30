@@ -34,7 +34,14 @@ import { LoaderComponent } from './loader/loader.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { LoaderserviceService } from './loaderservice.service';
 import { LoaderInterceptor } from './loader.interceptor';
-
+import { FileComponent } from './file/file.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatIconModule } from "@angular/material/icon";
+import { MatCardModule } from "@angular/material/card";
+import { MatButtonModule } from "@angular/material/button";
+import { MatProgressBarModule } from "@angular/material/progress-bar";
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +69,9 @@ import { LoaderInterceptor } from './loader.interceptor';
     InputchildComponent,
     DebounceComponent,
     UserloginComponent,
-    LoaderComponent
+    LoaderComponent,
+    FileComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
@@ -71,12 +80,18 @@ import { LoaderInterceptor } from './loader.interceptor';
     FormsModule,
     ReactiveFormsModule,
     LoadingBarModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    BrowserAnimationsModule,
+     MatToolbarModule,  
+    MatIconModule,  
+    MatButtonModule,  
+    MatCardModule,  
+    MatProgressBarModule  
   ],
   providers: [
-    LoaderserviceService, {
+    /* LoaderserviceService, {
       provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true
-    }
+    } */
 /*     {
       provide: ErrorHandler,
       useClass: ErrorserviceService

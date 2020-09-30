@@ -21,6 +21,8 @@ import { InputdemoComponent } from './inputdemo/inputdemo.component';
 import { InputchildComponent } from './inputdemo/inputchild/inputchild.component';
 import { DebounceComponent } from './debounce/debounce.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
+import { FileComponent } from './file/file.component';
+import { UploadComponent } from './upload/upload.component';
 
 
 const routes: Routes = [
@@ -33,6 +35,8 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: 'pipes', component: PipesComponent },
   { path: 'corona', component: CoronaComponent },
+  { path: 'upload', component: UploadComponent },
+  { path: 'file', component: FileComponent },
   { path: 'movie', component: MovieComponent },
   { path: 'rapid', component: RapidComponent },
   {
