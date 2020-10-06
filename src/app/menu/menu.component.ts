@@ -31,7 +31,8 @@ export class MenuComponent implements OnInit {
       { title: 'debounce', link: 'debounce' },
       { title: 'file', link: 'file' },
       { title: 'userlogin', link: 'userlogin' },
-      { title: 'upload', link: 'upload' }
+      { title: 'upload', link: 'upload' },
+      { title: 'fileupload', link: 'fileupload' }
 
 
     ]

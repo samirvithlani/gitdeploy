@@ -42,6 +42,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { UploadComponent } from './upload/upload.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { UploadComponent } from './upload/upload.component';
     UserloginComponent,
     LoaderComponent,
     FileComponent,
-    UploadComponent
+    UploadComponent,
+    FileuploadComponent
   ],
   imports: [
     BrowserModule,

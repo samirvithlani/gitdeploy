@@ -23,6 +23,7 @@ import { DebounceComponent } from './debounce/debounce.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { FileComponent } from './file/file.component';
 import { UploadComponent } from './upload/upload.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: 'file', component: FileComponent },
   { path: 'movie', component: MovieComponent },
   { path: 'rapid', component: RapidComponent },
+  { path: 'fileupload', component: FileuploadComponent },
   {
     path: 'inputdemo', component: InputdemoComponent, children: [
       {

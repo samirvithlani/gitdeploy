@@ -1,0 +1,33 @@
+<div *ngIf="currentFile" class="progress">
+<div
+    class="progress-bar progress-bar-info progress-bar-stripted"
+    role="progressbar"
+    attr.aria-valunow="{{progress}}"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    [ngStyle]="{width:progress +'%'}">
+
+{{progress}}%
+</div>
+
+</div>
+
+<label class="btn btn-default">
+    <input type="file" (change)="selectFile($event)">
+</label>
+<button class="btn btn-success"(click)="upload()">UPLOAD</button>
+
+
+<div class="alert alert-light" role="alert">{{message}}</div>
+
+
+
+<div class="card">
+<div class="card-header">LIST OF FILES</div>
+<ul class="list-group list-group-flush"
+*ngFor ="let file of fileInfo | async">
+<li class="list-group-item">
+<a href="{{file.url}}">{{file.name}}</a>
+</li>
+</ul>
+</div>
