@@ -43,6 +43,8 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { UploadComponent } from './upload/upload.component';
 import { FileuploadComponent } from './fileupload/fileupload.component';
+import { File2Component } from './file2/file2.component';
+import { FileformComponent } from './fileform/fileform.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,9 @@ import { FileuploadComponent } from './fileupload/fileupload.component';
     LoaderComponent,
     FileComponent,
     UploadComponent,
-    FileuploadComponent
+    FileuploadComponent,
+    File2Component,
+    FileformComponent
   ],
   imports: [
     BrowserModule,

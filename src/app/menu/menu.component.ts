@@ -32,7 +32,9 @@ export class MenuComponent implements OnInit {
       { title: 'file', link: 'file' },
       { title: 'userlogin', link: 'userlogin' },
       { title: 'upload', link: 'upload' },
-      { title: 'fileupload', link: 'fileupload' }
+      { title: 'fileupload', link: 'fileupload' },
+      { title: 'fileupload2', link: 'fileupload2' },
+      { title: 'fileform', link: 'fileform' }
 
 
     ]

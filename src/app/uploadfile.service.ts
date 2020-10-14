@@ -13,10 +13,10 @@ getFiles():Observable<any>{
 
   return this.http.get("http://localhost:8080/files")
 }
-  upload(file:File):Observable<HttpEvent<any>>{
+  upload(formData):Observable<HttpEvent<any>>{
 
-    const formData = new FormData();
-    formData.append('file',file);
+    //const formData = new FormData();
+    //formData.append('file',file);
 
     const req= new HttpRequest('POST',"http://localhost:8080/upload",formData,{
       reportProgress:true,
